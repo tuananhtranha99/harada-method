@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/features/auth/authmodal.tsx","./src/features/character/pixelstage.tsx","./src/features/pillars/pillarboard.tsx","./src/features/pillars/types.ts","./src/shared/api/apiclient.ts"],"version":"5.7.3"}
