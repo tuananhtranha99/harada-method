@@ -1,4 +1,10 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+const getBaseUrl = (): string => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+  // Chuẩn hoá: xoá dấu gạch chéo cuối và xoá /api/v1 nếu người dùng lỡ điền thừa
+  return envUrl.trim().replace(/\/+$/, '').replace(/\/api\/v1$/, '');
+};
+
+const API_BASE_URL = getBaseUrl();
 
 export interface ApiEnvelope<T> {
   success: boolean;
